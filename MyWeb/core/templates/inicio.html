@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{%' img/logonuevo.ico' %}">
+    <title>Store Impresions</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% 'css/PokeApi.css'%}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% 'css/miestilo.css' %}">
+    <script>
+      function startTime() {
+        const today = new Date();
+        let h = today.getHours();
+        let m = today.getMinutes();
+        let s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+        setTimeout(startTime, 1000);
+      }
+      
+      function checkTime(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+      }
+    </script>
+
+  </head>
+<body onload="startTime()">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light, fondonav">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    
+    <!-- logo -->
+    <a class="navbar-brand" href="inicio.html">
+      <img src="img/logonuevo.png" width="215" height="115" alt="" style="margin-left: 20px;">
+    </a>
+    <div class="nav-link, letranav" id="txt" style="margin-left:30px; font-size: 210%;"></div>
+    <!-- enlaces -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent"> 
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link, letranav" href="tienda.html">TIENDA</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link, letranav" href="informacion.html">INFORMACIÓN</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link, letranav" href="contacto.html">CONTACTO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link, letranav" href="registro.html">REGISTRO</a>
+        </li>             
+      </ul>
+    </div>
+  </nav>
+
+
+  <div id="carousel1" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-bs-target="#carousel1" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#carousel1" data-bs-slide-to="1"></li>
+      <li data-bs-target="#carousel1" data-bs-slide-to="2"></li>
+      <li data-bs-target="#carousel1" data-bs-slide-to="3"></li>
+      <li data-bs-target="#carousel1" data-bs-slide-to="4"></li>
+    </ol>
+    <!-- diapositivas -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="img/carrusel1.png" alt="">
+          <div class="carousel-caption">
+          </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="img/carrusel2.png" alt="">
+          <div class="carousel-caption">
+          </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="img/carrusel3.png" alt="">
+          <div class="carousel-caption">
+          </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="img/carrusel4.png" alt="">
+          <div class="carousel-caption">
+          </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="img/carrusel5.png" alt="">
+          <div class="carousel-caption">
+          </div>
+      </div>
+    </div>
+    <!-- botones de desplazamiento a izquierda y derecha -->      
+    <a class="carousel-control-prev" href="#carousel1" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </a>
+    <a class="carousel-control-next" href="#carousel1" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </a>
+  </div>
+  <br><br>  
+
+  <div class="container py-4">
+    <div class="card mb-3 card-horizontal" style="background-color: rgba(255, 255, 255, 0); border: none;">
+      <div class="card-body">
+        <p class="card-text, letranav" style="text-align: justify;">
+          Los estampados y las impresiones han sido una parte esencial de la moda, transformando la ropa con diseños únicos y colores vibrantes. Con la impresión digital, los diseñadores pueden crear estampados complejos y personalizados, mejorando la accesibilidad y sostenibilidad.
+          La impresión digital ha revolucionado el diseño textil, permitiendo crear patrones detallados sin desperdiciar material. Además, esta tecnología facilita la creación de textiles innovadores, brindando más opciones para diseñadores y consumidores.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <h1 class="letranav" style = "text-align: center; font-size: 210%;">Genera tu batalla con pokémon.api</h1>
+
+    <button class="button btn-warning" style="font-family: fuenteBonita; margin-top: 20px; width:200px; color: black    "" onclick="consultarPokemones()">Nueva batalla</button>
+
+    <div class="pokemon-list" id="listaPokemon">
+        <div class="pokemon" id="pokemon-1">
+            <img src="" alt="">
+            <p>Pokemon 1 </p>
+        </div>
+
+        <div class="vs" style=color:white;> vs.</div>
+
+        <div class="pokemon" id="pokemon-2">
+            <img src="" alt="">
+            <p>Pokemon 2 </p>
+        </div>
+
+    </div>
+
+    <script>
+
+        let lista=document.getElementById("listaPokemon")
+
+
+        function consultarPokemon (id,num){
+          fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
+           .then(function(response){
+                response.json()
+               .then(function(pokemon){
+                   crearPokemon(pokemon,num)
+               })
+
+            })
+        }
+
+        function consultarPokemones(){
+            let primerId = Math.round(Math.random() * 150)
+            let segundoId = Math.round(Math.random() * 150)
+            consultarPokemon(primerId, 1)
+            consultarPokemon(segundoId, 2)
+        }
+
+        
+
+        function crearPokemon(pokemon,num){
+
+            let item = lista.querySelector(`#pokemon-${num}`)
+            let imagen = item.getElementsByTagName("img")[0]
+            imagen.setAttribute("src",pokemon.sprites.front_default)
+            let nombre = item.getElementsByTagName("p")[0]
+            nombre.textContent = pokemon.name
+
+        }
+
+
+        consultarPokemones()
+
+    </script>
+    <br><br>  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+
+  <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <h4 class="letranavfut">Av. Los Pajaritos 3195</h4>
+                <h4 class="letranavfut">+56 9 2352 9263</h4>
+                <h4 class="letranavfut">storeimpresionsbusiness@gmail.com</h4>
+            </div>
+            
+            <div class="col-md-4">
+                <h4 class="letranavfut">Síguenos en redes sociales</h4>
+                <ul class="social-icons">
+                  <li><a href="https://www.instagram.com/"><img src="img/iconinstagram.png" alt="instagram"></a></li>
+                  <li><a href="https://www.youtube.com/"><img src="img/iconyoutube.png" alt="youtube"></a></li>
+                  <li><a href="https://www.tiktok.com/es/"><img src="img/icontiktok.png" alt="tiktok"></a></li>
+                </ul>
+              </div>
+              
+            <div class="col-md-3">
+              <p class="letranavfut" style= "color:#ffffff; "><strong>©</strong> 2025, Derechos Reservados</p>
+            </div>
+        </div>
+    </div>
+  </footer>
+
+</body>
+</html>

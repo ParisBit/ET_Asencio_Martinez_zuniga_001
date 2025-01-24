@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logonuevo.ico">
+    <title>Información</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/miestilo.css">
+    <script>
+      function startTime() {
+        const today = new Date();
+        let h = today.getHours();
+        let m = today.getMinutes();
+        let s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+        setTimeout(startTime, 1000);
+      }
+      
+      function checkTime(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+      }
+    </script>
+</head>
+<body onload="startTime()">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light, fondonav">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    
+    <!-- logo -->
+    <a class="navbar-brand" href="inicio.html">
+      <img src="img/logonuevo.png" width="215" height="115" alt="" style="margin-left: 20px;">
+    </a>
+    <div class="nav-link, letranav" id="txt" style="margin-left:30px; font-size: 210%;"></div>
+    <!-- enlaces -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent"> 
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link, letranav" href="tienda.html">TIENDA</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link, letranav" href="informacion.html">INFORMACIÓN</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link, letranav" href="contacto.html">CONTACTO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link, letranav" href="registro.html">REGISTRO</a>
+        </li>             
+      </ul>
+    </div>
+  </nav>
+      
+    
+
+  <h1 class="letranav" style = "text-align: center; font-size: 210%;">Acerca de nosotros</h1>
+
+    <div class="container py-4">
+      <div class="card mb-3 card-horizontal">
+        <div class="card-body">
+          <h5 class="card-title, letranav" style="color:black;text-align:center;">¿Quiénes Somos?</h5>
+          <p class="card-text" style="text-align: justify;">
+            A finales del año 2024, en el corazón de Chile, nació <strong>Store Impresions</strong>, una idea inspirada en la pasión por la creatividad, el diseño y la conexión con las personas. 
+            <strong>Store Impresions</strong> no solo vende productos, sino que ha creado una comunidad vibrante donde las personas encuentran inspiración para plasmar sus ideas en prendas y accesorios. Con el tiempo, también hemos colaborado con artistas locales, fomentando el talento chileno y convirtiéndonos en una plataforma para mostrar su arte.
+          </p>
+        </div>
+      </div>
+    
+    
+      <div class="card mb-3 card-horizontal">
+        <div class="card-body">
+          <h5 class="card-title, letranav" style="color:black;text-align:center;">Misión</h5>
+          <p class="card-text" style="text-align: justify;">
+            Empoderar a nuestros clientes para que expresen su individualidad y creatividad a través de prendas y accesorios personalizados de alta calidad. Nos comprometemos a brindar una experiencia única, accesible y significativa, combinando innovación, diseño y un servicio excepcional para convertir ideas en realidad.
+          </p>
+        </div>
+      </div>
+
+      <div class="card mb-3 card-horizontal">
+        <div class="card-body">
+          <h5 class="card-title, letranav" style="color:black;text-align:center;">Visión</h5>
+          <p class="card-text" style="text-align: justify;">
+            Ser la marca líder en diseño personalizado en América Latina, reconocida por nuestra excelencia, compromiso con la sostenibilidad y apoyo a la creatividad local. Aspiramos a expandir nuestra comunidad y cruzar fronteras, transformando el mundo de la moda y los accesorios en una plataforma para la autoexpresión y el talento artístico.
+          </p>
+        </div>
+      </div>
+
+      <div class="card mb-3 card-horizontal">
+        <div class="card-body">
+          <h5 class="card-title, letranav" style="color:black;text-align:center;">Impresiones que trabajamos</h5>
+          <p class="card-text" style="text-align: justify;">
+            Ofrecemos productos personalizados de alta calidad, como poleras, polerones, tazones y gorras, utilizando diversas técnicas de estampado que se adaptan a tus necesidades y diseños:
+            <br>
+            1. <strong>DTG (Direct to Garment)</strong>: Ideal para imprimir diseños a full color directamente sobre prendas de algodón, como poleras y polerones. Utilizamos la avanzada máquina Brother GTX, que garantiza resultados vibrantes y detallados sin requerir un mínimo de prendas.
+            <br>
+            2. <strong>DTF (Direct to Film)</strong>: Perfecto para diseños versátiles, permitiendo imprimir gráficos coloridos y duraderos que se transfieren a diferentes tipos de tejidos, incluyendo mezclas y materiales difíciles de trabajar.
+            <br>
+            3. <strong>Serigrafía</strong>: La opción más económica para pedidos grandes, especialmente útil para diseños con colores sólidos y definidos en poleras, polerones y gorras. Ofrece una excelente durabilidad y acabados de alta calidad.
+            <br>
+            4. <strong>Sublimación</strong>: Exclusiva para productos de poliéster o con superficies tratadas, como tazones y algunas gorras. Esta técnica logra impresiones permanentes, resistentes y con colores vibrantes que no se desgastan ni desvanecen.
+            <br>
+            En <strong>Store Impresions</strong>, eliminamos barreras como mínimos de producción, requisitos complicados o cotizaciones tediosas. Nos dedicamos a brindarte una experiencia sencilla, rápida y personalizada para que transformes tus ideas en realidad, con la técnica perfecta para cada producto y diseño.
+          </p>
+        </div>
+      </div>
+
+    </div> 
+      
+  
+    <div class="container">
+      <iframe class= "video" width="560" height="315" src="https://www.youtube.com/embed/K2hOhnIk1KQ?si=-UtrIuynlIQXkBoD" title="YouTube video player" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+      </iframe>
+    </div>
+    <br><br>
+  <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <h4 class="letranavfut">Av. Los Pajaritos 3195</h4>
+                <h4 class="letranavfut">+56 9 2352 9263</h4>
+                <h4 class="letranavfut">storeimpresionsbusiness@gmail.com</h4>
+            </div>
+            
+            <div class="col-md-4">
+                <h4 class="letranavfut">Síguenos en redes sociales</h4>
+                <ul class="social-icons">
+                  <li><a href="https://www.instagram.com/"><img src="img/iconinstagram.png" alt="instagram"></a></li>
+                  <li><a href="https://www.youtube.com/"><img src="img/iconyoutube.png" alt="youtube"></a></li>
+                  <li><a href="https://www.tiktok.com/es/"><img src="img/icontiktok.png" alt="tiktok"></a></li>
+                </ul>
+              </div>
+              
+            <div class="col-md-3">
+              <p class="letranavfut" style= "color:#ffffff; "><strong>©</strong> 2025, Derechos Reservados</p>
+            </div>
+        </div>
+    </div>
+  </footer>
+
+</body>
+</html>

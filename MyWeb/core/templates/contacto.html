@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logonuevo.ico">
+    <title>Contacto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/miestilo.css">
+    <style>
+        .form-control{
+            margin-bottom: 10px;
+        }
+
+        .error-control{
+            border:1px solid red;
+        }
+
+        label.error{
+            color:red;
+            margin-top:-5px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            clear: both;
+            float: left;
+            width: 150px;
+        }
+
+    </style>
+    <script>
+      function startTime() {
+        const today = new Date();
+        let h = today.getHours();
+        let m = today.getMinutes();
+        let s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+        setTimeout(startTime, 1000);
+      }
+      
+      function checkTime(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+      }
+    </script>
+</head>
+<body onload="startTime()">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light, fondonav">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    
+    <!-- logo -->
+    <a class="navbar-brand" href="inicio.html">
+      <img src="img/logonuevo.png" width="215" height="115" alt="" style="margin-left: 20px;">
+    </a>
+    <div class="nav-link, letranav" id="txt" style="margin-left:30px; font-size: 210%;"></div>
+    <!-- enlaces -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent"> 
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link, letranav" href="tienda.html">TIENDA</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link, letranav" href="informacion.html">INFORMACIÓN</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link, letranav" href="contacto.html">CONTACTO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link, letranav" href="registro.html">REGISTRO</a>
+        </li>             
+      </ul>
+    </div>
+  </nav>   
+</head>
+<body>
+    <div class="container">
+        <h2 class="letranav" style="margin-top: 30px; text-align: center; font-size: 210%;">Formulario de Contacto</h2>
+        <br>
+
+        <form id="mis-datos">
+            <label for="nombre">Nombre completo: </label>
+            <input type="text" id="nombre" name="nombre" required minlength="3" class="form-control" placeholder="Ingrese su nombre...">
+            <br>
+            <label for="correo">Correo electrónico: </label>
+            <input type="email" id="correo" name="correo" required class="form-control" placeholder="Ingrese su correo...">
+            <br>
+            <label for="telefono">Teléfono: </label>
+            <input type="text" id="telefono" name="telefono" required minlength="9" class="form-control" placeholder="Ingrese su teléfono...">
+            <br>
+            <label for="comuna">Comuna: </label>
+            <select id="comuna" name="comuna" class="form-control" required>
+                <option value="">Seleccione una comuna...</option>
+                <option value="1">Alhué</option>
+                <option value="2">Alto Jahuel</option>
+                <option value="3">Angostura</option>
+                <option value="4">Batuco</option>
+                <option value="5">Buin</option>
+                <option value="6">Cajón del Maipo</option>
+                <option value="7">Calera de Tango</option>
+                <option value="8">Caleu</option>
+                <option value="9">Cerrillos</option>
+                <option value="10">Cerro Navia</option>
+                <option value="11">Champa</option>
+                <option value="12">Chicureo</option>
+                <option value="13">Colina</option>
+                <option value="14">Conchalí</option>
+                <option value="15">Curacaví</option>
+                <option value="16">El Bosque</option>
+                <option value="17">El Colorado</option>
+                <option value="18">El Monte</option>
+                <option value="19">Estación Central</option>
+                <option value="20">Farellones</option>
+                <option value="21">Hospital</option>
+                <option value="22">Huechuraba</option>
+                <option value="23">Helquén</option>
+                <option value="24">Independencia</option>
+                <option value="25">Isla de Maipo</option>
+                <option value="26">La Cisterna</option>
+                <option value="27">La Dehesa</option>
+                <option value="28">La Florida</option>
+                <option value="29">La Granja</option>
+                <option value="30">La Parva</option>
+                <option value="31">La Pintana</option>
+                <option value="32">La Reina</option>
+                <option value="33">Lampa</option>
+                <option value="34">La Condes</option>
+                <option value="35">Linderos</option>
+                <option value="36">Lo Barnechea</option>
+                <option value="37">Lo Espejo</option>
+                <option value="38">Lo Prado</option>
+                <option value="39">Lonquen</option>
+                <option value="40">Macul</option>
+                <option value="41">Maipo</option>
+                <option value="42">Maipú</option>
+                <option value="43">Mallarauco</option>
+                <option value="44">Malloco</option>
+                <option value="45">María Pinto</option>
+                <option value="46">Melipilla</option>
+                <option value="47">Nos</option>
+                <option value="48">Ñuñoa</option>
+                <option value="49">Padre Hurtado</option>
+                <option value="50">Paine</option>
+                <option value="51">Pedro Aguirre Cerda</option>
+                <option value="52">Peldehue</option>
+                <option value="53">Peñaflor</option>
+                <option value="54">Peñalolén</option>
+                <option value="55">Pomaire</option>
+                <option value="56">Providencia</option>
+                <option value="57">Pudahuel</option>
+                <option value="58">Puente Alto</option>
+                <option value="59">Quilicura</option>
+                <option value="60">Quinta Normal</option>
+                <option value="61">Recoleta</option>
+                <option value="62">Renca</option>
+                <option value="63">San Bernardo</option>
+                <option value="64">San Joaquín</option>
+                <option value="65">San José de Maipo</option>
+                <option value="66">San Miguel</option>
+                <option value="67">San Pedro</option>
+                <option value="68">San Ramón</option>
+                <option value="69">Santa Rosa de Chena</option>
+                <option value="70">Santiago</option>
+                <option value="71">Talagante</option>
+                <option value="72">Tiltil</option>
+                <option value="73">Valdivia</option>
+                <option value="74">Valle Nevado</option>
+                <option value="75">Vitacura</option>
+            </select>
+            <br>
+            <div class="form-group">
+                <label for="modalidad">Motivo: </label><br>
+                <div class="radio">
+                    <label><input type="radio" name="count"> Personal</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="count">  Empresa</label>
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="descripcion" class="col-sm-2 control-label">Descripción</label>
+                <div class="col-sm-10">
+                    <textarea name="descripcion" id="descripcion" cols="40" rows="5" required class="form-control"></textarea>
+                </div>
+            </div>
+
+            <button class="btn btn-warning" id="enviar" style="font-family: fuenteBonita; margin-top: 20px; width:150px; color: black    ">Enviar</button>
+            
+        </form>
+    </div>
+    <br><br><br><br><br>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.js"></script>
+    <script src="js/validaForm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <h4 class="letranavfut">Av. Los Pajaritos 3195</h4>
+                    <h4 class="letranavfut">+56 9 2352 9263</h4>
+                    <h4 class="letranavfut">storeimpresionsbusiness@gmail.com</h4>
+                </div>
+                
+                <div class="col-md-4">
+                    <h4 class="letranavfut">Síguenos en redes sociales</h4>
+                    <ul class="social-icons">
+                      <li><a href="https://www.instagram.com/"><img src="img/iconinstagram.png" alt="instagram"></a></li>
+                      <li><a href="https://www.youtube.com/"><img src="img/iconyoutube.png" alt="youtube"></a></li>
+                      <li><a href="https://www.tiktok.com/es/"><img src="img/icontiktok.png" alt="tiktok"></a></li>
+                    </ul>
+                  </div>
+                  
+                <div class="col-md-3">
+                  <p class="letranavfut" style= "color:#ffffff; "><strong>©</strong> 2025, Derechos Reservados</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
