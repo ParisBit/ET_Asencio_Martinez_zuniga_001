@@ -9,6 +9,15 @@ from django.shortcuts import render
 def inicio(request):
     return render(request, 'inicio.html')
 
+def informacion(request):
+    return render(request, 'informacion.html')
+
+def contacto(request):
+    return render(request, 'contacto.html')
+
+def registro(request):
+    return render(request, 'registro.html')
+
 
 # Vistas para CRUD de productos
 
