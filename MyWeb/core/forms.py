@@ -9,6 +9,11 @@ class ProductoForm(forms.ModelForm):
         model = Producto
         fields = ['codigo', 'nombre', 'descripcion', 'imagen', 'precio', 'stock', 'categoria']
 
+class RegistroUsuarioForm(UserCreationForm):
+    class Meta:
+        model = User
+        fields = ['username', 'email', 'password1', 'password2']
+
 # Implementación de autenticación de usuarios
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
