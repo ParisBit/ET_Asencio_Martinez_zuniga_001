@@ -18,6 +18,9 @@ def contacto(request):
 def registro(request):
     return render(request, 'registro.html')
 
+def carrito(request):
+    return render(request, 'carrito.html')
+
 
 # Vistas para CRUD de productos
 
@@ -54,6 +57,6 @@ def eliminar_producto(request, id):
         return redirect('listar_productos')
 
 def tienda(request):
-    # Aquí podrías agregar lógica relacionada con los productos, por ejemplo.
+
     productos = Producto.objects.all()  # O cualquier lógica que necesites para la tienda.
     return render(request, 'tienda.html', {'productos': productos})

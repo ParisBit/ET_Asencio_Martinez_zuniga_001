@@ -14,11 +14,11 @@
         <td>{{ item.cantidad }}</td>
         <td>{{ item.subtotal }}</td>
         <td>
-            <a href="{% url 'eliminar_del_carrito' item.producto.id %}">Eliminar</a>
+            <a href="#">Eliminar</a>
         </td>
     </tr>
     {% endfor %}
 </table>
 <h3>Total: {{ total }}</h3>
-<a href="{% url 'producto_lista' %}">Seguir comprando</a>
+<a href="#">Seguir comprando</a>
 {% endblock %}

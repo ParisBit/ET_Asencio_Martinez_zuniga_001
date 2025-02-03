@@ -1,8 +1,8 @@
 # Crear formulario para productos
-
-
 from django import forms
-from .models import Producto
+from .models import Producto, User
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 
 class ProductoForm(forms.ModelForm):
     class Meta:
@@ -15,8 +15,7 @@ class RegistroUsuarioForm(UserCreationForm):
         fields = ['username', 'email', 'password1', 'password2']
 
 # Implementación de autenticación de usuarios
-from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
+
 
 def iniciar_sesion(request):
     if request.method == 'POST':
